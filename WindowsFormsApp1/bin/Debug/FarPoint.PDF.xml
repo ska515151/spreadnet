@@ -1,0 +1,2180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>FarPoint.PDF</name>
+  </assembly>
+  <members>
+    <member name="T:FarPoint.PDF.Drawing.EMF.Document">
+      <summary>Represents a document.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.EMF.Document.#ctor">
+      <summary>Creates a new document.</summary>
+    </member>
+    <member name="P:FarPoint.PDF.Drawing.EMF.Document.Item(System.Int32)">
+      <summary>Gets a record.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.EMF.Document.Play(FarPoint.PDF.Drawing.Graphics)">
+      <summary>Plays the record to the specified graphics device.</summary>
+      <param name="g">Graphics device</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.EMF.Document.Add(FarPoint.PDF.Drawing.EMF.Records.Record)">
+      <summary>Adds a record.</summary>
+      <param name="rec">Record</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.EMF.Document.Dispose">
+      <summary>Disposes of resources.</summary>
+    </member>
+    <member name="T:FarPoint.PDF.Drawing.EMF.Reader">
+      <summary>Represents a reader.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.EMF.Reader.Read(System.IO.Stream,System.Type[])">
+      <summary>Creates a new reader.</summary>
+    </member>
+    <member name="T:FarPoint.PDF.Drawing.EMF.Records.Record">
+      <summary>Interface that supports dispose.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.EMF.Records.Record.Dispose">
+      <summary>Disposes of resources.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.EMF.Records.Record.Read(System.Byte[],System.Int32,System.Int32)">
+      <summary>Reads the record.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.EMF.Records.Record.Play(FarPoint.PDF.Drawing.Graphics)">
+      <summary>Plays the record to the graphics device.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.EMF.Records.Record.ToString">
+      <summary>Converts to a string.</summary>
+    </member>
+    <member name="P:FarPoint.PDF.Drawing.EMF.Records.Record.ObjectID">
+      <summary>Gets the object identifier.</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.Record.m_ObjectID">
+      <summary>Sets the object identifier.</summary>
+    </member>
+    <member name="T:FarPoint.PDF.Drawing.EMF.Records.RECTL">
+      <summary>Represents the rectangle record.</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.RECTL.left">
+      <summary>Sets the length of the left side.</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.RECTL.top">
+      <summary>Sets the length of the top.</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.RECTL.right">
+      <summary>Sets the length of the right side.</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.RECTL.bottom">
+      <summary>Sets the length of the bottom.</summary>
+    </member>
+    <member name="T:FarPoint.PDF.Drawing.EMF.Records.POINTS">
+      <summary>Represents the point (16-bit) record.</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.POINTS.x">
+      <summary>Sets the x-coordinate of the point.</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.POINTS.y">
+      <summary>Sets the y-coordinate of the point.</summary>
+    </member>
+    <member name="T:FarPoint.PDF.Drawing.EMF.Records.POINTL">
+      <summary>Represents the point (32-bit) record.</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.POINTL.x">
+      <summary>Sets the x-coordinate of the point.</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.POINTL.y">
+      <summary>Sets the y-coordinate of the point.</summary>
+    </member>
+    <member name="T:FarPoint.PDF.Drawing.EMF.Records.SIZEL">
+      <summary>Represents the size record.</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.SIZEL.cx">
+      <summary>Sets the change in the x-coordinate.</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.SIZEL.cy">
+      <summary>Sets the change in the y-coordinate.</summary>
+    </member>
+    <member name="T:FarPoint.PDF.Drawing.EMF.Records.XFORM">
+      <summary>Represents the transformation record.</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.XFORM.eM11">
+      <summary>Sets the matrix value</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.XFORM.eM12">
+      <summary>Sets the matrix value</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.XFORM.M21">
+      <summary>Sets the matrix value</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.XFORM.M22">
+      <summary>Sets the matrix value</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.XFORM.eDx">
+      <summary>Sets the matrix value</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.XFORM.eDy">
+      <summary>Sets the matrix value</summary>
+    </member>
+    <member name="T:FarPoint.PDF.Drawing.EMF.Records.RGNDATA">
+      <summary>Represents the region data record.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.EMF.Records.RGNDATA.Read(System.Byte[],System.Int32,System.Int32)">
+      <summary>Reads the region data.</summary>
+    </member>
+    <member name="T:FarPoint.PDF.Drawing.EMF.Records.LOGFONT">
+      <summary>Represents the font record.</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.LOGFONT.lfHeight">
+      <summary>Sets the font parameter for height</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.LOGFONT.lfWidth">
+      <summary>Sets the font parameter for width</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.LOGFONT.lfEscapement">
+      <summary>Sets the font parameter for escapement</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.LOGFONT.lfOrientation">
+      <summary>Sets the font parameter for orientation</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.LOGFONT.lfWeight">
+      <summary>Sets the font parameter for weight</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.LOGFONT.lfItalic">
+      <summary>Sets the font parameter for italics</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.LOGFONT.lfUnderline">
+      <summary>Sets the font parameter for underline</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.LOGFONT.lfStrikeOut">
+      <summary>Sets the font parameter for strikeout</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.LOGFONT.lfCharSet">
+      <summary>Sets the font parameter for character set</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.LOGFONT.lfOutPrecision">
+      <summary>Sets the font parameter for output precision</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.LOGFONT.lfClipPrecision">
+      <summary>Sets the font parameter for Clipboard precision</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.LOGFONT.lfQuality">
+      <summary>Sets the font parameter for quality</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.LOGFONT.lfPitchAndFamily">
+      <summary>Sets the font parameter for pitch and font family</summary>
+    </member>
+    <member name="P:FarPoint.PDF.Drawing.EMF.Records.LOGFONT.lfFaceName">
+      <summary>Gets the font parameter for font face name</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.EMF.Records.LOGFONT.Read(System.Byte[],System.Int32,System.Int32)">
+      <summary>Reads the font parameter.</summary>
+    </member>
+    <member name="T:FarPoint.PDF.Drawing.EMF.Records.RecordType">
+      <summary>Specifies the type of record.</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.RecordType.EMR_HEADER">
+      <summary>[1] Record is a header</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.RecordType.EMR_POLYGON">
+      <summary>[3] Record is a polygon</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.RecordType.EMR_POLYPOLYGON">
+      <summary>[8] Record is a poly-polygon</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.RecordType.EMR_SETWINDOWEXTEX">
+      <summary>[9] Record is a set window ext</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.RecordType.EMR_SETWINDOWORGEX">
+      <summary>[10] Record is a set window or</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.RecordType.EMR_SETVIEWPORTEXTEX">
+      <summary>[11] Record is a set view port ext</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.RecordType.EMR_EOF">
+      <summary>[14] Record is a end of file (EOF)</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.RecordType.EMR_SETMAPMODE">
+      <summary>[17] Record is a set map mode</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.RecordType.EMR_SETBKMODE">
+      <summary>[18] Record is a set background mode</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.RecordType.EMR_SETPOLYFILLMODE">
+      <summary>[19] Record is a set polyfill mode</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.RecordType.EMR_SETROP2">
+      <summary>[20] Record is a set ROP</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.RecordType.EMR_SETSTRETCHBLTMODE">
+      <summary>[21] Record is a set stretch blt mode</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.RecordType.EMR_SETTEXTALIGN">
+      <summary>[22] Record is a set text alignment</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.RecordType.EMR_SETTEXTCOLOR">
+      <summary>[24] Record is a set text color</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.RecordType.EMR_SETBKCOLOR">
+      <summary>[25] Record is a set background color</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.RecordType.EMR_INTERSECTCLIPRECT">
+      <summary>[30] Record is a intersect clip rectangle</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.RecordType.EMR_SAVEDC">
+      <summary>[33] Record is a save DC</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.RecordType.EMR_RESTOREDC">
+      <summary>[34] Record is a restore DC</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.RecordType.EMR_SELECTOBJECT">
+      <summary>[37] Record is a select object</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.RecordType.EMR_DELETEOBJECT">
+      <summary>[40] Record is a delete object</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.RecordType.EMR_SELECTPALETTE">
+      <summary>[48] Record is a select palette</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.RecordType.EMR_SETMITERLIMIT">
+      <summary>[58] Record is a set milter (mail filter) limit</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.RecordType.EMR_BEGINPATH">
+      <summary>[59] Record is a begin path</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.RecordType.EMR_ENDPATH">
+      <summary>[60] Record is a end path</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.RecordType.EMR_GDICOMMENT">
+      <summary>[70] Record is a GDI comment</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.RecordType.EMR_EXTSELECTCLIPRGN">
+      <summary>[75] Record is a ext select clip region</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.RecordType.EMR_BITBLT">
+      <summary>[76] Record is a bit blt</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.RecordType.EMR_EXTCREATEFONTINDIRECTW">
+      <summary>[82] Record is a ext create font direct w</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.RecordType.EMR_STRETCHDIBITS">
+      <summary>[81] Record is a </summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.RecordType.EMR_EXTTEXTOUTW">
+      <summary>[84] Record is a ext text out w</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.RecordType.EMR_POLYGON16">
+      <summary>[86] Record is a polygon (16-bit)</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.RecordType.EMR_POLYPOLYGON16">
+      <summary>[91] Record is a poly-polygon (16-bit)</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.RecordType.EMR_SETICMMODE">
+      <summary>[98] Record is a set IC mode</summary>
+    </member>
+    <member name="T:FarPoint.PDF.Drawing.EMF.Records.ROP2">
+      <summary>
+            Specifies the ROP (raster operator).
+            </summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.ROP2.R2_BLACK">
+      <summary>
+            [1] Uses black
+            </summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.ROP2.R2_NOTMERGEPEN">
+      <summary>
+            [2] Uses merge pen
+            </summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.ROP2.R2_MASKNOTPEN">
+      <summary>
+            [3] Uses mask NOT pen
+            </summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.ROP2.R2_NOTCOPYPEN">
+      <summary>
+            [4] Uses NOT copy pen
+            </summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.ROP2.R2_MASKPENNOT">
+      <summary>
+            [5] Uses mask pen NOT
+            </summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.ROP2.R2_NOT">
+      <summary>
+            [6] Uses NOT
+            </summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.ROP2.R2_XORPEN">
+      <summary>
+            [7] Uses XOR pen
+            </summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.ROP2.R2_NOTMASKPEN">
+      <summary>
+            [8] Uses NOT mask pen
+            </summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.ROP2.R2_MASKPEN">
+      <summary>
+            [9] Uses mask pen
+            </summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.ROP2.R2_NOTXORPEN">
+      <summary>
+            [1] Uses NOT XOR pen
+            </summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.ROP2.R2_NOP">
+      <summary>
+            [10] Uses NOP
+            </summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.ROP2.R2_MERGENOTPEN">
+      <summary>
+            [12] Uses merge NOT pen
+            </summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.ROP2.R2_COPYPEN">
+      <summary>
+            [13] Uses copy pen
+            </summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.ROP2.R2_MERGEPENNOT">
+      <summary>
+            [14] Uses merge pen NOT
+            </summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.ROP2.R2_MERGEPEN">
+      <summary>
+            [15] Uses merge pen
+            </summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.ROP2.R2_WHITE">
+      <summary>
+            [16] Uses white
+            </summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.ROP2.R2_LAST">
+      <summary>
+            Uses last and white
+            </summary>
+    </member>
+    <member name="T:FarPoint.PDF.Drawing.EMF.Records.BkMode">
+      <summary>
+            Specifies the background mode
+            </summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.BkMode.TRANSPARENT">
+      <summary>
+            [1] Uses transparent background
+            </summary>
+    </member>
+    <member name="F:FarPoint.PDF.Drawing.EMF.Records.BkMode.OPAQUE">
+      <summary>
+            [2] Uses opaque background
+            </summary>
+    </member>
+    <member name="T:FarPoint.PDF.Drawing.Graphics">
+      <summary>
+            Represents the graphics device drawing functions.
+            </summary>
+      <remarks>
+            This class performs all the drawing functions on a PDF Page object.
+            It maintains the PDF grpahic state using structures GraphicState and GraphicsStateStack.
+            Always remember to update the graphic state structures in case the PDF graphics state changes.
+            </remarks>
+    </member>
+    <member name="P:FarPoint.PDF.Drawing.Graphics.ShowColor">
+      <summary>
+            Gets or sets a value indicating whether [show color].
+            </summary>
+      <value>
+        <c>true</c> if [show color]; otherwise, <c>false</c>.</value>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawArc(System.Drawing.Pen,System.Drawing.Rectangle,System.Single,System.Single)">
+      <summary>
+            Draws an arc representing a portion of an ellipse specified by a Rectangle structure.
+            </summary>
+      <param name="pen">Pen object that determines the color, width, and style of the arc</param>
+      <param name="rectangle">Rectangle structure that defines the boundaries of the arc</param>
+      <param name="startAngle">Angle in degrees measured clockwise from the x-axis to the starting point of the arc</param>
+      <param name="sweepAngle">Angle in degrees measured clockwise from the startAngle parameter to ending point of the arc</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawArc(System.Drawing.Pen,System.Drawing.RectangleF,System.Single,System.Single)">
+      <summary>
+            Draws an arc representing a portion of an ellipse specified by a Rectangle structure.
+            </summary>
+      <param name="pen">Pen object that determines the color, width, and style of the arc</param>
+      <param name="rectangle">RectangleF structure that defines the boundaries of the arc</param>
+      <param name="startAngle">Angle in degrees measured clockwise from the x-axis to the starting point of the arc</param>
+      <param name="sweepAngle">Angle in degrees measured clockwise from the startAngle parameter to ending point of the arc</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawArc(System.Drawing.Pen,System.Int32,System.Int32,System.Int32,System.Int32,System.Single,System.Single)">
+      <summary>
+            Draws an arc representing a portion of an ellipse specified by a pair of coordinates, a width, and a height.
+            </summary>
+      <param name="pen">Pen object that determines the color, width, and style of the arc</param>
+      <param name="x">X-coordinate of the upper-left corner of the rectangle that defines the arc</param>
+      <param name="y">Y-coordinate of the upper-left corner of the rectangle that defines the arc</param>
+      <param name="width">Width of the rectangle that defines the arc</param>
+      <param name="height">Height of the rectangle that defines the arc</param>
+      <param name="startAngle">Angle in degrees measured clockwise from the x-axis to the starting point of the arc</param>
+      <param name="sweepAngle">Angle in degrees measured clockwise from the startAngle parameter to ending point of the arc</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawArc(System.Drawing.Pen,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+      <summary>
+            Draws an arc representing a portion of an ellipse specified by a pair of coordinates, a width, and a height.
+            </summary>
+      <param name="pen">Pen object that determines the color, width, and style of the arc</param>
+      <param name="x">X-coordinate of the upper-left corner of the rectangle that defines the arc</param>
+      <param name="y">Y-coordinate of the upper-left corner of the rectangle that defines the arc</param>
+      <param name="width">Width of the rectangle that defines the arc</param>
+      <param name="height">Height of the rectangle that defines the arc</param>
+      <param name="startAngle">Angle in degrees measured clockwise from the x-axis to the starting point of the arc</param>
+      <param name="sweepAngle">Angle in degrees measured clockwise from the startAngle parameter to ending point of the arc</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawBezier(System.Drawing.Pen,System.Drawing.Point,System.Drawing.Point,System.Drawing.Point,System.Drawing.Point)">
+      <summary>
+            Draws a Bezier spline defined by four Point structures.
+            </summary>
+      <param name="pen">Pen structure that determines the color, width, and style of the curve</param>
+      <param name="pt1">Point structure that represents the starting point of the curve</param>
+      <param name="pt2">Point structure that represents the first control point for the curve</param>
+      <param name="pt3">Point structure that represents the second control point for the curve</param>
+      <param name="pt4">Point structure that represents the ending point of the curve</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawBezier(System.Drawing.Pen,System.Drawing.PointF,System.Drawing.PointF,System.Drawing.PointF,System.Drawing.PointF)">
+      <summary>
+            Draws a Bezier spline defined by four Point structures.
+            </summary>
+      <param name="pen">Pen structure that determines the color, width, and style of the curve</param>
+      <param name="pt1">PointF structure that represents the starting point of the curve</param>
+      <param name="pt2">PointF structure that represents the first control point for the curve</param>
+      <param name="pt3">PointF structure that represents the second control point for the curve</param>
+      <param name="pt4">PointF structure that represents the ending point of the curve</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawBezier(System.Drawing.Pen,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+      <summary>
+            Draws a Bezier spline defined by four ordered pairs of coordinates that represent points.
+            </summary>
+      <param name="pen">Pen object that determines the color, width, and style of the curve</param>
+      <param name="x1">X-coordinate of the starting point of the curve</param>
+      <param name="y1">Y-coordinate of the starting point of the curve</param>
+      <param name="x2">X-coordinate of the first control point of the curve</param>
+      <param name="y2">Y-coordinate of the first control point of the curve</param>
+      <param name="x3">X-coordinate of the second control point of the curve</param>
+      <param name="y3">Y-coordinate of the second control point of the curve</param>
+      <param name="x4">X-coordinate of the ending point of the curve</param>
+      <param name="y4">Y-coordinate of the ending point of the curve</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawClosedCurve(System.Drawing.Pen,System.Drawing.Point[])">
+      <summary>
+            Draws a closed cardinal spline defined by an array of Point structures.
+            </summary>
+      <param name="pen">Pen object that determines the color, width, and height of the curve</param>
+      <param name="points">Array of Point structures that define the spline</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawClosedCurve(System.Drawing.Pen,System.Drawing.PointF[])">
+      <summary>
+            Draws a closed cardinal spline defined by an array of PointF structures.
+            </summary>
+      <param name="pen">Pen object that determines the color, width, and height of the curve</param>
+      <param name="points">Array of PointF structures that define the spline</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawClosedCurve(System.Drawing.Pen,System.Drawing.Point[],System.Single,System.Drawing.Drawing2D.FillMode)">
+      <summary>
+            Draws a closed cardinal spline defined by an array of Point structures using a specified tension.
+            </summary>
+      <param name="pen">Pen object that determines the color, width, and height of the curve</param>
+      <param name="points">Array of Point structures that define the spline</param>
+      <param name="tension">Value greater than or equal to 0.0F that specifies the tension of the curve</param>
+      <param name="fillmode">Member of the FillMode enumeration that determines how the curve is filled. This parameter is required but ignored</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawClosedCurve(System.Drawing.Pen,System.Drawing.PointF[],System.Single,System.Drawing.Drawing2D.FillMode)">
+      <summary>
+            Draws a closed cardinal spline defined by an array of PointF structures using a specified tension.
+            </summary>
+      <param name="pen">Pen object that determines the color, width, and height of the curve</param>
+      <param name="points">Array of PointF structures that define the spline</param>
+      <param name="tension">Value greater than or equal to 0.0F that specifies the tension of the curve</param>
+      <param name="fillmode">Member of the FillMode enumeration that determines how the curve is filled. This parameter is required but ignored</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawCurve(System.Drawing.Pen,System.Drawing.Point[])">
+      <summary>
+            Draws a cardinal spline through a specified array of Point structures.
+            </summary>
+      <param name="pen">Pen object that determines the color, width, and height of the curve</param>
+      <param name="points">Array of Point structures that define the spline</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawCurve(System.Drawing.Pen,System.Drawing.PointF[])">
+      <summary>
+            Draws a cardinal spline through a specified array of PointF structures.
+            </summary>
+      <param name="pen">Pen object that determines the color, width, and height of the curve</param>
+      <param name="points">Array of PointF structures that define the spline</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawCurve(System.Drawing.Pen,System.Drawing.Point[],System.Single)">
+      <summary>
+            Draws a cardinal spline through a specified array of Point structures using a specified tension.
+            </summary>
+      <param name="pen">Pen object that determines the color, width, and height of the curve</param>
+      <param name="points">Array of Point structures that define the spline</param>
+      <param name="tension">Value greater than or equal to 0.0F that specifies the tension of the curve</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawCurve(System.Drawing.Pen,System.Drawing.PointF[],System.Single)">
+      <summary>
+            Draws a cardinal spline through a specified array of PointF structures using a specified tension.
+            </summary>
+      <param name="pen">Pen object that determines the color, width, and height of the curve</param>
+      <param name="points">Array of PointF structures that define the spline</param>
+      <param name="tension">Value greater than or equal to 0.0F that specifies the tension of the curve</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawCurve(System.Drawing.Pen,System.Drawing.PointF[],System.Int32,System.Int32)">
+      <summary>
+            Draws a cardinal spline through a specified array of PointF structure. The drawing begins offset from the beginning of the array.
+            </summary>
+      <param name="pen">Pen object that determines the color, width, and height of the curve</param>
+      <param name="points">Array of PointF structures that define the spline</param>
+      <param name="offset">Offset from the first element in the array of the points parameter to the starting point in the curve</param>
+      <param name="numberOfSegments">Number of segments after the starting point to include in the curve</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawCurve(System.Drawing.Pen,System.Drawing.Point[],System.Int32,System.Int32,System.Single)">
+      <summary>
+            Draws a cardinal spline through a specified array of Point structures using a specified tension. The drawing begins offset from the beginning of the array.
+            </summary>
+      <param name="pen">Pen object that determines the color, width, and height of the curve</param>
+      <param name="points">Array of Point structures that define the spline</param>
+      <param name="offset">Offset from the first element in the array of the points parameter to the starting point in the curve</param>
+      <param name="numberOfSegments">Number of segments after the starting point to include in the curve</param>
+      <param name="tension">Value greater than or equal to 0.0F that specifies the tension of the curve</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawCurve(System.Drawing.Pen,System.Drawing.PointF[],System.Int32,System.Int32,System.Single)">
+      <summary>
+            Draws a cardinal spline through a specified array of PointF structures using a specified tension. The drawing begins offset from the beginning of the array.
+            </summary>
+      <param name="pen">Pen object that determines the color, width, and height of the curve</param>
+      <param name="points">Array of PointF structures that define the spline</param>
+      <param name="offset">Offset from the first element in the array of the points parameter to the starting point in the curve</param>
+      <param name="numberOfSegments">Number of segments after the starting point to include in the curve</param>
+      <param name="tension">Value greater than or equal to 0.0F that specifies the tension of the curve</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawEllipse(System.Drawing.Pen,System.Drawing.Rectangle)">
+      <summary>
+            Draws an ellipse defined by a bounding rectangle specified by a pair of coordinates, a height, and a width.
+            </summary>
+      <param name="pen">Pen object that determines the color, width, and style of the ellipse</param>
+      <param name="rectangle">Rectangle structure that defines the boundaries of the ellipse</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawEllipse(System.Drawing.Pen,System.Drawing.RectangleF)">
+      <summary>
+            Draws an ellipse defined by a bounding rectangle specified by a pair of coordinates, a height, and a width.
+            </summary>
+      <param name="pen">Pen object that determines the color, width, and style of the ellipse</param>
+      <param name="rectangle">RectangleF structure that defines the boundaries of the ellipse</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawEllipse(System.Drawing.Pen,System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>
+            Draws an ellipse defined by a bounding rectangle specified by a pair of coordinates, a height, and a width.
+            </summary>
+      <param name="pen">Pen object that determines the color, width, and style of the ellipse</param>
+      <param name="x">X-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse</param>
+      <param name="y">Y-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse</param>
+      <param name="width">Width of the bounding rectangle that defines the ellipse</param>
+      <param name="height">Height of the bounding rectangle that defines the ellipse</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawEllipse(System.Drawing.Pen,System.Single,System.Single,System.Single,System.Single)">
+      <summary>
+            Draws an ellipse defined by a bounding rectangle specified by a pair of coordinates, a height, and a width.
+            </summary>
+      <param name="pen">Pen object that determines the color, width, and style of the ellipse</param>
+      <param name="x">X-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse</param>
+      <param name="y">Y-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse</param>
+      <param name="width">Width of the bounding rectangle that defines the ellipse</param>
+      <param name="height">Height of the bounding rectangle that defines the ellipse</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawLine(System.Drawing.Pen,System.Drawing.Point,System.Drawing.Point)">
+      <summary>
+            Draws a line connecting the two points specified by coordinate pairs.
+            </summary>
+      <param name="pen">Pen object that determines the color, width, and style of the line</param>
+      <param name="pt1">Point structure that represents the first point to connect</param>
+      <param name="pt2">Point structure that represents the second point to connect</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawLine(System.Drawing.Pen,System.Drawing.PointF,System.Drawing.PointF)">
+      <summary>
+            Draws a line connecting the two points specified by coordinate pairs.
+            </summary>
+      <param name="pen">Pen object that determines the color, width, and style of the line</param>
+      <param name="pt1">PointF structure that represents the first point to connect</param>
+      <param name="pt2">PointF structure that represents the second point to connect</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawLine(System.Drawing.Pen,System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>
+            Draws a line connecting the two points specified by coordinate pairs.
+            </summary>
+      <param name="pen">Pen object that determines the color, width, and style of the line</param>
+      <param name="x1">X-coordinate of the first point</param>
+      <param name="y1">Y-coordinate of the first point</param>
+      <param name="x2">X-coordinate of the second point</param>
+      <param name="y2">Y-coordinate of the second point</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawLine(System.Drawing.Pen,System.Single,System.Single,System.Single,System.Single)">
+      <summary>
+            Draws a line connecting the two points specified by coordinate pairs.
+            </summary>
+      <param name="pen">Pen object that determines the color, width, and style of the line</param>
+      <param name="x1">X-coordinate of the first point</param>
+      <param name="y1">Y-coordinate of the first point</param>
+      <param name="x2">X-coordinate of the second point</param>
+      <param name="y2">Y-coordinate of the second point</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawLine(System.Drawing.Color,System.Single,System.Single,System.Single,System.Single,System.Single)">
+      <summary>
+            Draws a line connecting the two points specified by coordinate pairs.
+            </summary>
+      <param name="color">The color.</param>
+      <param name="thickness">The thickness.</param>
+      <param name="x1">X-coordinate of the first point</param>
+      <param name="y1">Y-coordinate of the first point</param>
+      <param name="x2">X-coordinate of the second point</param>
+      <param name="y2">Y-coordinate of the second point</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawPath(System.Drawing.Pen,System.Drawing.Drawing2D.GraphicsPath)">
+      <summary>
+            Draws a GraphicsPath object.
+            </summary>
+      <param name="pen">Pen object that determines the color, width, and style of the path</param>
+      <param name="path">GraphicsPath object to draw</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawPie(System.Drawing.Pen,System.Drawing.Rectangle,System.Single,System.Single)">
+      <summary>
+            Draws a pie shape defined by an ellipse specified by a Rectangle structure and two radial lines.
+            </summary>
+      <param name="pen">Pen object that determines the color, width, and style of the pie shape</param>
+      <param name="rectangle">Rectangle structure that represents the bounding rectangle that defines the ellipse from which the pie shape comes</param>
+      <param name="startAngle">Angle measured in degrees clockwise from the x-axis to the first side of the pie shape</param>
+      <param name="sweepAngle">Angle measured in degrees clockwise from the startAngle parameter to the second side of the pie shape</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawPie(System.Drawing.Pen,System.Drawing.RectangleF,System.Single,System.Single)">
+      <summary>
+            Draws a pie shape defined by an ellipse specified by a RectangleF structure and two radial lines.
+            </summary>
+      <param name="pen">Pen object that determines the color, width, and style of the pie shape</param>
+      <param name="rectangle">RectangleF structure that represents the bounding rectangle that defines the ellipse from which the pie shape comes</param>
+      <param name="startAngle">Angle measured in degrees clockwise from the x-axis to the first side of the pie shape</param>
+      <param name="sweepAngle">Angle measured in degrees clockwise from the startAngle parameter to the second side of the pie shape</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawPie(System.Drawing.Pen,System.Int32,System.Int32,System.Int32,System.Int32,System.Single,System.Single)">
+      <summary>
+            Draws a pie shape defined by an ellipse specified by a coordinate pair, a width, and a height and two radial lines.
+            </summary>
+      <param name="pen">Pen object that determines the color, width, and style of the pie shape</param>
+      <param name="x">X-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse from which the pie shape comes</param>
+      <param name="y">Y-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse from which the pie shape comes</param>
+      <param name="width">Width of the bounding rectangle that defines the ellipse from which the pie shape comes</param>
+      <param name="height">Height of the bounding rectangle that defines the ellipse from which the pie shape comes</param>
+      <param name="startAngle">Angle measured in degrees clockwise from the x-axis to the first side of the pie shape</param>
+      <param name="sweepAngle">Angle measured in degrees clockwise from the startAngle parameter to the second side of the pie shape</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawPie(System.Drawing.Pen,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+      <summary>
+            Draws a pie shape defined by an ellipse specified by a coordinate pair, a width, and a height and two radial lines.
+            </summary>
+      <param name="pen">Pen object that determines the color, width, and style of the pie shape</param>
+      <param name="x">X-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse from which the pie shape comes</param>
+      <param name="y">Y-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse from which the pie shape comes</param>
+      <param name="width">Width of the bounding rectangle that defines the ellipse from which the pie shape comes</param>
+      <param name="height">Height of the bounding rectangle that defines the ellipse from which the pie shape comes</param>
+      <param name="startAngle">Angle measured in degrees clockwise from the x-axis to the first side of the pie shape</param>
+      <param name="sweepAngle">Angle measured in degrees clockwise from the startAngle parameter to the second side of the pie shape</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawRectangle(System.Drawing.Pen,System.Drawing.Rectangle)">
+      <summary>
+            Draws a rectangle specified by a coordinate pair, a width, and a height.
+            </summary>
+      <param name="pen">Draws a rectangle specified by a coordinate pair, a width, and a height</param>
+      <param name="rectangle">A Rectangle structure that represents the rectangle to draw</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawRectangle(System.Drawing.Pen,System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>
+            Draws a rectangle specified by a coordinate pair, a width, and a height.
+            </summary>
+      <param name="pen">Draws a rectangle specified by a coordinate pair, a width, and a height</param>
+      <param name="x">X-coordinate of the upper-left corner of the rectangle to draw</param>
+      <param name="y">Y-coordinate of the upper-left corner of the rectangle to draw</param>
+      <param name="width">Width of the rectangle to draw</param>
+      <param name="height">Height of the rectangle to draw</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawRectangle(System.Drawing.Pen,System.Single,System.Single,System.Single,System.Single)">
+      <summary>
+            Draws a rectangle specified by a coordinate pair, a width, and a height.
+            </summary>
+      <param name="pen">Draws a rectangle specified by a coordinate pair, a width, and a height</param>
+      <param name="x">X-coordinate of the upper-left corner of the rectangle to draw</param>
+      <param name="y">Y-coordinate of the upper-left corner of the rectangle to draw</param>
+      <param name="width">Width of the rectangle to draw</param>
+      <param name="height">Height of the rectangle to draw</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawPolygon(System.Drawing.Pen,System.Drawing.Point[])">
+      <summary>
+            Draws a polygon defined by an array of Point structures.	
+            </summary>
+      <param name="pen">Pen object that determines the color, width, and style of the polygon</param>
+      <param name="points">Array of Point structures that represent the vertices of the polygon</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawPolygon(System.Drawing.Pen,System.Drawing.PointF[])">
+      <summary>
+            Draws a polygon defined by an array of Point structures.	
+            </summary>
+      <param name="pen">Pen object that determines the color, width, and style of the polygon</param>
+      <param name="points">Array of PointF structures that represent the vertices of the polygon</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawString(System.String,System.Drawing.Font,System.Drawing.Brush,System.Drawing.PointF)">
+      <summary>
+            Draws the specified text string at the specified location with the specified Brush and Font objects.
+            </summary>
+      <param name="s">String to draw</param>
+      <param name="font">Font object that defines the text format of the string</param>
+      <param name="brush">Brush object that determines the color and texture of the drawn text</param>
+      <param name="point">PointF structure that specifies the upper-left corner of the drawn text</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawString(System.String,System.Drawing.Font,System.Drawing.Brush,System.Drawing.RectangleF)">
+      <summary>
+            Draws the specified text string in the specified rectangle with the specified Brush and Font objects.
+            </summary>
+      <param name="s">String to draw</param>
+      <param name="font">Font object that defines the text format of the string</param>
+      <param name="brush">Brush object that determines the color and texture of the drawn text</param>
+      <param name="rectangle">RectangleF structure that specifies the location of the drawn text</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawString(System.String,System.Drawing.Font,System.Drawing.Brush,System.Drawing.PointF,System.Drawing.StringFormat)">
+      <summary>
+            Draws the specified text string at the specified location with the specified Brush and Font objects using the formatting attributes of the specified StringFormat object.
+            </summary>
+      <param name="s">String to draw</param>
+      <param name="font">Font object that defines the text format of the string</param>
+      <param name="brush">Brush object that determines the color and texture of the drawn text</param>
+      <param name="point">PointF structure that specifies the upper-left corner of the drawn text</param>
+      <param name="format">StringFormat object that specifies formatting attributes, such as line spacing and alignment, that are applied to the drawn text</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawString(System.String,System.Drawing.Font,System.Drawing.Brush,System.Drawing.RectangleF,System.Drawing.StringFormat)">
+      <summary>
+            Draws the specified text string in the specified rectangle with the specified Brush and Font objects using the formatting attributes of the specified StringFormat object.
+            </summary>
+      <param name="s">String to draw</param>
+      <param name="font">Font object that defines the text format of the string</param>
+      <param name="brush">Brush object that determines the color and texture of the drawn text</param>
+      <param name="rectangle">RectangleF structure that specifies the location of the drawn text</param>
+      <param name="format">StringFormat object that specifies formatting attributes, such as line spacing and alignment, that are applied to the drawn text</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawString(System.String,System.Drawing.Font,System.Drawing.Brush,System.Drawing.RectangleF,System.Drawing.StringFormat,System.Boolean)">
+      <summary>
+            Internal use only.
+            </summary>
+      <param name="s"></param>
+      <param name="font"></param>
+      <param name="brush"></param>
+      <param name="rectangle"></param>
+      <param name="format"></param>
+      <param name="singleLine"></param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawString(System.String,System.Drawing.Font,System.Drawing.Brush,System.Single,System.Single)">
+      <summary>
+            Draws the specified text string at the specified location with the specified Brush and Font objects.
+            </summary>
+      <param name="s">String to draw</param>
+      <param name="font">Font object that defines the text format of the string</param>
+      <param name="brush">Brush object that determines the color and texture of the drawn text</param>
+      <param name="x">x coordinate of the upper-left corner of the drawn text</param>
+      <param name="y">y coordinate of the upper-left corner of the drawn text</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.Save">
+      <summary>
+            Save the current state
+            </summary>
+      <returns></returns>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.Restore(System.Object)">
+      <summary>
+            Re-store state
+            </summary>
+      <param name="state"></param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawString(System.String,System.Drawing.Font,System.Drawing.Brush,System.Single,System.Single,System.Drawing.StringFormat)">
+      <summary>
+            Draws the specified text string at the specified location with the specified Brush and Font objects using the formatting attributes of the specified StringFormat object.
+            </summary>
+      <param name="s">String to draw</param>
+      <param name="font">Font object that defines the text format of the string</param>
+      <param name="brush">Brush object that determines the color and texture of the drawn text</param>
+      <param name="x">x coordinate of the upper-left corner of the drawn text</param>
+      <param name="y">y coordinate of the upper-left corner of the drawn text</param>
+      <param name="format">StringFormat object that specifies formatting attributes, such as line spacing and alignment, that are applied to the drawn text</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawImage(System.Drawing.Image,System.Single,System.Single)">
+      <summary>
+            Draws the specified Image object, using its original physical size, at the specified location.
+            </summary>
+      <param name="image">Image object to draw</param>
+      <param name="x">X-coordinate of the upper-left corner of the drawn image</param>
+      <param name="y">Y-coordinate of the upper-left corner of the drawn image</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawImage(System.Drawing.Image,System.Int32,System.Int32)">
+      <summary>
+            Draws the specified Image object, using its original physical size, at the specified location.
+            </summary>
+      <param name="image">Image object to draw</param>
+      <param name="x">X-coordinate of the upper-left corner of the drawn image</param>
+      <param name="y">Y-coordinate of the upper-left corner of the drawn image</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawImage(System.Drawing.Image,System.Drawing.Point)">
+      <summary>
+            Draws the specified Image object, using its original physical size, at the specified location.
+            </summary>
+      <param name="image">Image object to draw</param>
+      <param name="point">Point structure that represents the location of the upper-left corner of the drawn image</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawImage(System.Drawing.Image,System.Drawing.PointF)">
+      <summary>
+            Draws the specified Image object, using its original physical size, at the specified location.
+            </summary>
+      <param name="image">Image object to draw</param>
+      <param name="point">Point structure that represents the location of the upper-left corner of the drawn image</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawImage(System.Drawing.Image,System.Single,System.Single,System.Boolean)">
+      <summary>
+            Draws the specified Image object, using its original physical size, at the specified location.
+            </summary>
+      <param name="image">Image object to draw</param>
+      <param name="x">X-coordinate of the upper-left corner of the drawn image</param>
+      <param name="y">Y-coordinate of the upper-left corner of the drawn image</param>
+      <param name="keepTransparency">Indicates if we should keep the transparency of the image</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawImage(System.Drawing.Image,System.Int32,System.Int32,System.Boolean)">
+      <summary>
+            Draws the specified Image object, using its original physical size, at the specified location.
+            </summary>
+      <param name="image">Image object to draw</param>
+      <param name="x">X-coordinate of the upper-left corner of the drawn image</param>
+      <param name="y">Y-coordinate of the upper-left corner of the drawn image</param>
+      <param name="keepTransparency">Indicates if we should keep the transparency of the image</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawImage(System.Drawing.Image,System.Drawing.Point,System.Boolean)">
+      <summary>
+            Draws the specified Image object, using its original physical size, at the specified location.
+            </summary>
+      <param name="image">Image object to draw</param>
+      <param name="point">Point structure that represents the location of the upper-left corner of the drawn image</param>
+      <param name="keepTransparency">Indicates if we should keep the transparency of the image</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawImage(System.Drawing.Image,System.Drawing.PointF,System.Boolean)">
+      <summary>
+            Draws the specified Image object, using its original physical size, at the specified location.
+            </summary>
+      <param name="image">Image object to draw</param>
+      <param name="point">Point structure that represents the location of the upper-left corner of the drawn image</param>
+      <param name="keepTransparency">Indicates if we should keep the transparency of the image</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawImage(System.Drawing.Image,System.Drawing.Rectangle)">
+      <summary>
+            Draws the specified Image object at the specified location and with the specified size.
+            </summary>
+      <param name="image">Image object to draw</param>
+      <param name="rectangle">Rectangle structure that specifies the location and size of the drawn image</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawImage(System.Drawing.Image,System.Drawing.RectangleF)">
+      <summary>
+            Draws the specified Image object at the specified location and with the specified size.
+            </summary>
+      <param name="image">Image object to draw</param>
+      <param name="rectangle">Rectangle structure that specifies the location and size of the drawn image</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.DrawImage(System.Drawing.Image,System.Drawing.RectangleF,System.Boolean)">
+      <summary>
+            Draws the specified Image object at the specified location and with the specified size.
+            </summary>
+      <param name="image">Image object to draw</param>
+      <param name="rectangle">Rectangle structure that specifies the location and size of the drawn image</param>
+      <param name="keepTransparency">Indicates if we should keep the transparency of the image</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.FillClosedCurve(System.Drawing.Brush,System.Drawing.Point[])">
+      <summary>
+            Fills the interior a closed cardinal spline curve defined by an array of Point structures.
+            </summary>
+      <param name="brush">Brush object that determines the characteristics of the fill</param>
+      <param name="points">Array of Point structures that define the spline</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.FillClosedCurve(System.Drawing.Brush,System.Drawing.PointF[])">
+      <summary>
+            Fills the interior a closed cardinal spline curve defined by an array of PointF structures.
+            </summary>
+      <param name="brush">Brush object that determines the characteristics of the fill</param>
+      <param name="points">Array of PointF structures that define the spline</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.FillClosedCurve(System.Drawing.Brush,System.Drawing.Point[],System.Drawing.Drawing2D.FillMode)">
+      <summary>
+            Fills the interior a closed cardinal spline curve defined by an array of Point structures using the specified fill mode.
+            </summary>
+      <param name="brush">Brush object that determines the characteristics of the fill</param>
+      <param name="points">Array of Point structures that define the spline</param>
+      <param name="fillmode">Member of the FillMode enumeration that determines how the curve is filled</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.FillClosedCurve(System.Drawing.Brush,System.Drawing.PointF[],System.Drawing.Drawing2D.FillMode)">
+      <summary>
+            Fills the interior a closed cardinal spline curve defined by an array of PointF structures using the specified fill mode.
+            </summary>
+      <param name="brush">Brush object that determines the characteristics of the fill</param>
+      <param name="points">Array of PointF structures that define the spline</param>
+      <param name="fillmode">Member of the FillMode enumeration that determines how the curve is filled</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.FillClosedCurve(System.Drawing.Brush,System.Drawing.Point[],System.Drawing.Drawing2D.FillMode,System.Single)">
+      <summary>
+            Fills the interior a closed cardinal spline curve defined by an array of Point structures using the specified fill mode and tension.
+            </summary>
+      <param name="brush">Brush object that determines the characteristics of the fill</param>
+      <param name="points">Array of Point structures that define the spline</param>
+      <param name="fillmode">Member of the FillMode enumeration that determines how the curve is filled</param>
+      <param name="tension">Value greater than or equal to 0.0F that specifies the tension of the curve</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.FillClosedCurve(System.Drawing.Brush,System.Drawing.PointF[],System.Drawing.Drawing2D.FillMode,System.Single)">
+      <summary>
+            Fills the interior a closed cardinal spline curve defined by an array of PointF structures using the specified fill mode and tension.
+            </summary>
+      <param name="brush">Brush object that determines the characteristics of the fill</param>
+      <param name="points">Array of PointF structures that define the spline</param>
+      <param name="fillmode">Member of the FillMode enumeration that determines how the curve is filled</param>
+      <param name="tension">Value greater than or equal to 0.0F that specifies the tension of the curve</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.FillEllipse(System.Drawing.Brush,System.Drawing.Rectangle)">
+      <summary>
+            Fills the interior of an ellipse defined by a bounding rectangle specified by a pair of coordinates, a width, and a height.
+            </summary>
+      <param name="brush">Brush object that determines the characteristics of the fill</param>
+      <param name="rectangle">Rectangle structure that represents the bounding rectangle that defines the ellipse</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.FillEllipse(System.Drawing.Brush,System.Drawing.RectangleF)">
+      <summary>
+            Fills the interior of an ellipse defined by a bounding rectangle specified by a pair of coordinates, a width, and a height.
+            </summary>
+      <param name="brush">Brush object that determines the characteristics of the fill</param>
+      <param name="rectangle">RectangleF structure that represents the bounding rectangle that defines the ellipse</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.FillEllipse(System.Drawing.Brush,System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>
+            Fills the interior of an ellipse defined by a bounding rectangle specified by a pair of coordinates, a width, and a height.
+            </summary>
+      <param name="brush">Brush object that determines the characteristics of the fill</param>
+      <param name="x">X-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse</param>
+      <param name="y">Y-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse</param>
+      <param name="width">Width of the bounding rectangle that defines the ellipse</param>
+      <param name="height">Height of the bounding rectangle that defines the ellipse</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.FillEllipse(System.Drawing.Brush,System.Single,System.Single,System.Single,System.Single)">
+      <summary>
+            Fills the interior of an ellipse defined by a bounding rectangle specified by a pair of coordinates, a width, and a height.
+            </summary>
+      <param name="brush">Brush object that determines the characteristics of the fill</param>
+      <param name="x">X-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse</param>
+      <param name="y">Y-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse</param>
+      <param name="width">Width of the bounding rectangle that defines the ellipse</param>
+      <param name="height">Height of the bounding rectangle that defines the ellipse</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.FillPie(System.Drawing.Brush,System.Drawing.Rectangle,System.Single,System.Single)">
+      <summary>
+            Fills the interior of a pie section defined by an ellipse specified by a Rectangle structure and two radial lines.
+            </summary>
+      <param name="brush">Brush object that determines the characteristics of the fill</param>
+      <param name="rectangle">Rectangle structure that represents the bounding rectangle that defines the ellipse from which the pie section comes</param>
+      <param name="startAngle">Angle in degrees measured clockwise from the x-axis to the first side of the pie section</param>
+      <param name="sweepAngle">Angle in degrees measured clockwise from the startAngle parameter to the second side of the pie section</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.FillPie(System.Drawing.Brush,System.Int32,System.Int32,System.Int32,System.Int32,System.Single,System.Single)">
+      <summary>
+            Fills the interior of a pie section defined by an ellipse specified by a pair of coordinates, a width, and a height and two radial lines.
+            </summary>
+      <param name="brush">Brush object that determines the characteristics of the fill</param>
+      <param name="x">X-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse from which the pie shape comes</param>
+      <param name="y">Y-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse from which the pie shape comes</param>
+      <param name="width">Width of the bounding rectangle that defines the ellipse from which the pie shape comes</param>
+      <param name="height">Height of the bounding rectangle that defines the ellipse from which the pie shape comes</param>
+      <param name="startAngle">Angle measured in degrees clockwise from the x-axis to the first side of the pie shape</param>
+      <param name="sweepAngle">Angle measured in degrees clockwise from the startAngle parameter to the second side of the pie shape</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.FillPie(System.Drawing.Brush,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+      <summary>
+            Fills the interior of a pie section defined by an ellipse specified by a pair of coordinates, a width, and a height and two radial lines.
+            </summary>
+      <param name="brush">Brush object that determines the characteristics of the fill</param>
+      <param name="x">X-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse from which the pie shape comes</param>
+      <param name="y">Y-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse from which the pie shape comes</param>
+      <param name="width">Width of the bounding rectangle that defines the ellipse from which the pie shape comes</param>
+      <param name="height">Height of the bounding rectangle that defines the ellipse from which the pie shape comes</param>
+      <param name="startAngle">Angle measured in degrees clockwise from the x-axis to the first side of the pie shape</param>
+      <param name="sweepAngle">Angle measured in degrees clockwise from the startAngle parameter to the second side of the pie shape</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.FillRectangle(System.Drawing.Brush,System.Drawing.Rectangle)">
+      <summary>
+            Fills the interior of a rectangle specified by a Rectangle structure.Filled area determined by FillMode.Alternate
+            </summary>
+      <param name="brush">Brush object that determines the characteristics of the fill</param>
+      <param name="rectangle">Rectangle structure that represents the rectangle to fill</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.FillRectangle(System.Drawing.Brush,System.Drawing.RectangleF)">
+      <summary>
+            Fills the interior of a rectangle specified by a Rectangle structure.Filled area determined by FillMode.Alternate
+            </summary>
+      <param name="brush">Brush object that determines the characteristics of the fill</param>
+      <param name="rectangle">RectangleF structure that represents the rectangle to fill</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.FillRectangle(System.Drawing.Brush,System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>
+            Fills the interior of a rectangle specified by a pair of coordinates, a width, and a height.
+            </summary>
+      <param name="brush">Brush object that determines the characteristics of the fill</param>
+      <param name="x">X-coordinate of the upper-left corner of the rectangle to fill</param>
+      <param name="y">Y-coordinate of the upper-left corner of the rectangle to fill</param>
+      <param name="width">Width of the rectangle to fill</param>
+      <param name="height">Height of the rectangle to fill</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.FillRectangle(System.Drawing.Brush,System.Single,System.Single,System.Single,System.Single)">
+      <summary>
+            Fills the interior of a rectangle specified by a pair of coordinates, a width, and a height.
+            </summary>
+      <param name="brush">Brush object that determines the characteristics of the fill</param>
+      <param name="x">X-coordinate of the upper-left corner of the rectangle to fill</param>
+      <param name="y">Y-coordinate of the upper-left corner of the rectangle to fill</param>
+      <param name="width">Width of the rectangle to fill</param>
+      <param name="height">Height of the rectangle to fill</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.FillRectangle(System.Drawing.Color,System.Single,System.Single,System.Single,System.Single)">
+      <summary>
+            Fills the interior of a rectangle specified by a pair of coordinates, a width, and a height.
+            </summary>
+      <param name="fillColor">Brush object that determines the characteristics of the fill</param>
+      <param name="x">X-coordinate of the upper-left corner of the rectangle to fill</param>
+      <param name="y">Y-coordinate of the upper-left corner of the rectangle to fill</param>
+      <param name="width">Width of the rectangle to fill</param>
+      <param name="height">Height of the rectangle to fill</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.FillPolygon(System.Drawing.Brush,System.Drawing.Point[])">
+      <summary>
+            Fills the interior of a polygon defined by an array of points specified by Point structures.
+            </summary>
+      <param name="brush">Brush object that determines the characteristics of the fill</param>
+      <param name="points">Array of Point structures that represent the vertices of the polygon to fill</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.FillPolygon(System.Drawing.Brush,System.Drawing.PointF[])">
+      <summary>
+            Fills the interior of a polygon defined by an array of points specified by Point structures.
+            </summary>
+      <param name="brush">Brush object that determines the characteristics of the fill</param>
+      <param name="points">Array of PointF structures that represent the vertices of the polygon to fill</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.FillPolygon(System.Drawing.Brush,System.Drawing.Point[],System.Drawing.Drawing2D.FillMode)">
+      <summary>
+            Fills the interior of a polygon defined by an array of points specified by Point structures using the specified fill mode.
+            </summary>
+      <param name="brush">Brush object that determines the characteristics of the fill</param>
+      <param name="points">Array of Point structures that represent the vertices of the polygon to fill</param>
+      <param name="fillmode">Member of the FillMode enumeration that determines the style of the fill</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.FillPolygon(System.Drawing.Brush,System.Drawing.PointF[],System.Drawing.Drawing2D.FillMode)">
+      <summary>
+            Fills the interior of a polygon defined by an array of points specified by Point structures using the specified fill mode.
+            </summary>
+      <param name="brush">Brush object that determines the characteristics of the fill</param>
+      <param name="points">Array of Point structures that represent the vertices of the polygon to fill</param>
+      <param name="fillmode">Member of the FillMode enumeration that determines the style of the fill</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.SetClip(System.Drawing.Drawing2D.GraphicsPath)">
+      <summary>
+            Sets the clipping region of this Graphics object to the specified GraphicsPath object.
+            </summary>
+      <param name="path">GraphicsPath object that represents the new clip region</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.SetClip(System.Drawing.Rectangle)">
+      <summary>
+            Sets the clipping region of this Graphics object to the rectangle specified by a Rectangle structure.
+            </summary>
+      <param name="rectangle">Rectangle structure that represents the new clip region</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.SetClip(System.Drawing.RectangleF)">
+      <summary>
+            Sets the clipping region of this Graphics object to the rectangle specified by a RectangleFSS structure.
+            </summary>
+      <param name="rectangle">RectangleF structure that represents the new clip region</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.SetClip(System.Drawing.Drawing2D.GraphicsPath,System.Drawing.Drawing2D.CombineMode)">
+      <summary>
+            Sets the clipping region of this Graphics object to the result of the specified operation combining the current clip region and the specified GraphicsPath object.
+            </summary>
+      <param name="path">GraphicsPath object that represents the new clip region</param>
+      <param name="mode">Member of the CombineMode enumeration that specifies the combining operation to use</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.SetClip(System.Drawing.Rectangle,System.Drawing.Drawing2D.CombineMode)">
+      <summary>
+            Sets the clipping region of this Graphics object to the result of the specified operation combining the current clip region and the rectangle specified by a Rectangle structure.
+            </summary>
+      <param name="rectangle">Rectangle structure to combine</param>
+      <param name="mode">Member of the CombineMode enumeration that specifies the combining operation to use</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.SetClip(System.Drawing.RectangleF,System.Drawing.Drawing2D.CombineMode)">
+      <summary>
+            Sets the clipping region of this Graphics object to the result of the specified operation combining the current clip region and the rectangle specified by a RectangleF structure.
+            </summary>
+      <param name="rectangle">RectangleF structure to combine</param>
+      <param name="mode">Member of the CombineMode enumeration that specifies the combining operation to use</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.SetClip``1(``0)">
+      <summary>Sets the clip dynamically which depends on clipData.</summary>
+      <typeparam name="T">Currently, the function support: Rectangle, RectangleF, Point[], PointF[]</typeparam>
+      <param name="clipData">The clip data.</param>
+      <remarks>This function is internal use only.</remarks>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.SetClip(System.Drawing.Region,System.Drawing.Drawing2D.CombineMode)">
+      <summary>
+            Sets the clipping region of this Graphics object to the result of the specified operation combining the current clip region and the specified Region object.
+            </summary>
+      <param name="region">Region object to combine</param>
+      <param name="mode">Member of the CombineMode enumeration that specifies the combining operation to use</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.MultiplyTransform(System.Drawing.Drawing2D.Matrix)">
+      <summary>
+            Multiplies the world transformation of this Graphics object and specified the Matrix object.
+            </summary>
+      <param name="matrix">3x3 Matrix object that multiplies the world transformation</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.MultiplyTransform(System.Drawing.Drawing2D.Matrix,System.Drawing.Drawing2D.MatrixOrder)">
+      <summary>
+            Multiplies the world transformation of this Graphics object and specified the Matrix object in the specified order.
+            </summary>
+      <param name="matrix">3x3 Matrix object that multiplies the world transformation</param>
+      <param name="order">Member of the MatrixOrder enumeration that determines the order of the multiplication</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.RotateTransform(System.Single)">
+      <summary>
+            Applies the specified rotation to the transformation matrix of this Graphics object.
+            </summary>
+      <param name="angle">Angle of rotation in degrees</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.RotateTransform(System.Single,System.Drawing.Drawing2D.MatrixOrder)">
+      <summary>
+            Applies the specified rotation to the transformation matrix of this Graphics object in the specified order.
+            </summary>
+      <param name="angle">Angle of rotation in degrees</param>
+      <param name="order">Member of the MatrixOrder enumeration that determines the order of the multiplication</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.ScaleTransform(System.Single,System.Single)">
+      <summary>
+            Applies the specified scaling operation to the transformation matrix of this Graphics object by prepending it to the object's transformation matrix.
+            </summary>
+      <param name="sx">Scale factor in the x direction</param>
+      <param name="sy">Scale factor in the y direction</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.ScaleTransform(System.Single,System.Single,System.Drawing.Drawing2D.MatrixOrder)">
+      <summary>
+            Applies the specified scaling operation to the transformation matrix of this Graphics object in the specified order.
+            </summary>
+      <param name="sx">Scale factor in the x direction</param>
+      <param name="sy">Scale factor in the y direction</param>
+      <param name="order">Member of the MatrixOrder enumeration that determines the order of the multiplication</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.TranslateTransform(System.Single,System.Single)">
+      <summary>
+            Prepends the specified translation to the transformation matrix of this Graphics object.
+            </summary>
+      <param name="dx">x component of the translation</param>
+      <param name="dy">y component of the translation</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.TranslateTransform(System.Single,System.Single,System.Drawing.Drawing2D.MatrixOrder)">
+      <summary>  
+            Applies the specified translation to the transformation matrix of this Graphics object in the specified order.
+            </summary>
+      <param name="dx">x component of the translation</param>
+      <param name="dy">y component of the translation</param>
+      <param name="order">Member of the MatrixOrder enumeration that determines the order of the multiplication</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.ResetTransform">
+      <summary>
+            Resets the world transformation matrix of this Graphics object to the identity matrix.
+            </summary>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.ResetClip">
+      <summary>
+            Resets the Clipboard operation.
+            </summary>
+    </member>
+    <member name="P:FarPoint.PDF.Drawing.Graphics.Clip">
+      <summary>
+            Gets or sets the Clipboard operation.
+            </summary>
+    </member>
+    <member name="P:FarPoint.PDF.Drawing.Graphics.Transform">
+      <summary>
+            Gets or sets the world transformation for this Graphics object.
+            </summary>
+    </member>
+    <member name="P:FarPoint.PDF.Drawing.Graphics.PageUnit">
+      <summary>
+            Gets or sets the unit of measure used for page coordinates in this Graphics object.
+            </summary>
+    </member>
+    <member name="P:FarPoint.PDF.Drawing.Graphics.Dpi">
+      <summary>
+            Gets or sets the resolution (in dots per inch or pixels per inch).
+            </summary>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.Commit">
+      <summary>
+            Clears all the saved states.
+            </summary>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Graphics.Dispose">
+      <summary>
+            Disposes resources.
+            </summary>
+    </member>
+    <member name="T:FarPoint.PDF.Drawing.Matrix">
+      <summary>
+            Represents a wrapper for System.Drawing.Drawing2D.Matrix,
+            which raises events whenever a matrix transformation is performed.
+            </summary>
+    </member>
+    <member name="E:FarPoint.PDF.Drawing.Matrix.Transformed">
+      <summary>
+            Occurs when a transformation is performed.
+            </summary>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Matrix.#ctor">
+      <summary>
+            Creates a new transform matrix with default values.
+            </summary>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Matrix.#ctor(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+      <summary>
+            Creates a new transform matrix with the specified parameters.
+            </summary>
+      <param name="m11">m11</param>
+      <param name="m12">m12</param>
+      <param name="m21">m21</param>
+      <param name="m22">m22</param>
+      <param name="dx">dx</param>
+      <param name="dy">dy</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Matrix.#ctor(System.Drawing.Drawing2D.Matrix)">
+      <summary>
+            Creates a new transform matrix.
+            </summary>
+      <param name="matrix">Matrix</param>
+    </member>
+    <member name="P:FarPoint.PDF.Drawing.Matrix.Elements">
+      <summary>
+            Gets the elements.
+            </summary>
+    </member>
+    <member name="P:FarPoint.PDF.Drawing.Matrix.IsIdentity">
+      <summary>
+            Gets whether the tranformation is identity.
+            </summary>
+    </member>
+    <member name="P:FarPoint.PDF.Drawing.Matrix.IsInvertible">
+      <summary>
+            Gets whether the tranformation is invertible.
+            </summary>
+    </member>
+    <member name="P:FarPoint.PDF.Drawing.Matrix.OffsetX">
+      <summary>
+            Gets the horizontal (X) offset.
+            </summary>
+    </member>
+    <member name="P:FarPoint.PDF.Drawing.Matrix.OffsetY">
+      <summary>
+            Gets the vertical (Y) offset.
+            </summary>
+    </member>
+    <member name="P:FarPoint.PDF.Drawing.Matrix.TransformMatrix">
+      <summary>
+            Gets the clone of the tranformation matrix.
+            </summary>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Matrix.Clone">
+      <summary>
+            Clones.
+            </summary>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Matrix.Multiply(FarPoint.PDF.Drawing.Matrix)">
+      <summary>
+            Multiplies.
+            </summary>
+      <param name="matrix">Matrix</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Matrix.Multiply(System.Drawing.Drawing2D.Matrix)">
+      <summary>
+            Multiplies.
+            </summary>
+      <param name="matrix">Matrix</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Matrix.Multiply(FarPoint.PDF.Drawing.Matrix,System.Drawing.Drawing2D.MatrixOrder)">
+      <summary>
+            Multiplies.
+            </summary>
+      <param name="matrix">Matrix</param>
+      <param name="order">Matrix order</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Matrix.Multiply(System.Drawing.Drawing2D.Matrix,System.Drawing.Drawing2D.MatrixOrder)">
+      <summary>
+            Multiplies.
+            </summary>
+      <param name="matrix">Matrix</param>
+      <param name="order">Matrix order</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Matrix.Reset">
+      <summary>
+            Resets.
+            </summary>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Matrix.Rotate(System.Single)">
+      <summary>
+            Rotates.
+            </summary>
+      <param name="angle">Rotation angle</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Matrix.Rotate(System.Single,System.Drawing.Drawing2D.MatrixOrder)">
+      <summary>
+            Rotates.
+            </summary>
+      <param name="angle">Rotation angle</param>
+      <param name="order">Matrix order</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Matrix.Scale(System.Single,System.Single)">
+      <summary>
+            Scales.
+            </summary>
+      <param name="scaleX">Scale in horizontal, X, direction</param>
+      <param name="scaleY">Scale in vertical, Y, direction</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Matrix.Scale(System.Single,System.Single,System.Drawing.Drawing2D.MatrixOrder)">
+      <summary>
+            Scales.
+            </summary>
+      <param name="scaleX">Scale in horizontal, X, direction</param>
+      <param name="scaleY">Scale in vertical, Y, direction</param>
+      <param name="order">Matrix order</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Matrix.Translate(System.Single,System.Single)">
+      <summary>
+            Translates.
+            </summary>
+      <param name="offsetX">Offset in horizontal, X, direction</param>
+      <param name="offsetY">Offset in vertical, Y, direction</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Matrix.Translate(System.Single,System.Single,System.Drawing.Drawing2D.MatrixOrder)">
+      <summary>
+            Translates.
+            </summary>
+      <param name="offsetX">Offset in horizontal, X, direction</param>
+      <param name="offsetY">Offset in vertical, Y, direction</param>
+      <param name="order">Matrix order</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Matrix.Dispose">
+      <summary>
+            Disposes the managed resources and frees up resources.
+            </summary>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Matrix.Dispose(System.Boolean)">
+      <summary>
+            Disposes the managed resources.
+            </summary>
+      <param name="disposing">Whether disposing</param>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Matrix.Finalize">
+      <summary>
+            This destructor runs only if the Dispose method does not get called; 
+            it gives your base class the opportunity to finalize.
+            </summary>
+    </member>
+    <member name="T:FarPoint.PDF.Drawing.Matrix.TranformedEventArgs">
+      <summary>
+            Represents the trasformation performed and the parameters for the transformation.
+            </summary>
+    </member>
+    <member name="M:FarPoint.PDF.Drawing.Matrix.TranformedEventArgs.#ctor(System.String,System.Object[],System.Drawing.Drawing2D.MatrixOrder)">
+      <summary>
+            Creates a new transformation event arguments object.
+            </summary>
+      <param name="tranform">Transform</param>
+      <param name="parameters">Parameters</param>
+      <param name="order">Matrix order</param>
+    </member>
+    <member name="P:FarPoint.PDF.Drawing.Matrix.TranformedEventArgs.TransformType">
+      <summary>
+            Gets the transformation type.
+            </summary>
+    </member>
+    <member name="P:FarPoint.PDF.Drawing.Matrix.TranformedEventArgs.Parameters">
+      <summary>
+            Gets the parameters.
+            </summary>
+    </member>
+    <member name="P:FarPoint.PDF.Drawing.Matrix.TranformedEventArgs.Order">
+      <summary>
+            Gets the matrix order.
+            </summary>
+    </member>
+    <member name="T:FarPoint.PDF.Drawing.Matrix.TransformEventHandler">
+      <summary>
+            Represents a defined method that handles the Transform event.
+            </summary>
+    </member>
+    <!-- Badly formed XML comment ignored for member "F:FarPoint.PDF.PdfEncryption.x" -->
+    <!-- Badly formed XML comment ignored for member "F:FarPoint.PDF.PdfEncryption.y" -->
+    <member name="T:FarPoint.PDF.PdfSecurity">
+      <summary>
+            Encapsulates the information necessary to provide PDF document security and encryption.
+            </summary>
+      <remarks>
+            If a user password is supplied the viewer application should prompt for a password.
+            If a user password is not supplied no password will be requested to open the document.
+            By correctly supplying either the user password or the owner password, the user will be able to open the document, decrypt it, and display it on the screen.
+            Whether additional operations are allowed on a decrypted document depends on which password (if any) was supplied when the document was opened and on any access restrictions specified using this class's <see cref="P:FarPoint.PDF.PdfSecurity.Permissions" /> property.
+            </remarks>
+    </member>
+    <member name="M:FarPoint.PDF.PdfSecurity.#ctor(System.String,System.String,FarPoint.PDF.PdfPermissions)">
+      <summary>
+            Initializes an instance of the <see cref="T:FarPoint.PDF.PdfSecurity" /> class with the specified passwords and permissions.
+            </summary>
+      <param name="ownerPassword">The password, that upon being entered, permits the viewer unrestricted access to the document.</param>
+      <param name="userPassword">The password, that upon being entered, permits the viewer the permissions as specified in this class's <see cref="P:FarPoint.PDF.PdfSecurity.Permissions" /> property.</param>
+      <param name="permissions">The initial <see cref="P:FarPoint.PDF.PdfSecurity.Permissions" /> value for this object.</param>
+    </member>
+    <member name="M:FarPoint.PDF.PdfSecurity.#ctor(System.String,System.String)">
+      <summary>
+            Initializes an instance of the <see cref="T:FarPoint.PDF.PdfSecurity" /> class with the specified passwords and default permissions.  By default all permissions are allowed.
+            </summary>
+      <param name="ownerPassword">The password, that upon being entered, permits the viewer unrestricted access to the document.</param>
+      <param name="userPassword">The password, that upon being entered, permits the viewer the permissions as specified in this class's <see cref="P:FarPoint.PDF.PdfSecurity.Permissions" /> property.</param>
+    </member>
+    <member name="M:FarPoint.PDF.PdfSecurity.#ctor(System.String)">
+      <summary>
+            Initializes an instance of the <see cref="T:FarPoint.PDF.PdfSecurity" /> class with the specified passwords and default permissions.  By default all permissions are allowed.
+            </summary>
+      <param name="ownerPassword">The password that permits the viewer unrestricted access to the document.</param>
+    </member>
+    <member name="P:FarPoint.PDF.PdfSecurity.OwnerPassword">
+      <summary>
+            The owner password that permits full access to the 
+            document regardless of the specified user permissions.  
+            </summary>
+    </member>
+    <member name="P:FarPoint.PDF.PdfSecurity.UserPassword">
+      <summary>
+            The user password that can be entered in the reader.  If this value is left empty 
+            the user will not be prompted for a password; however, the user will be restricted by 
+            the specified permissions.
+            </summary>
+    </member>
+    <member name="P:FarPoint.PDF.PdfSecurity.Permissions">
+      <summary>
+            Specfies the user permissions for the document.  The <see cref="T:FarPoint.PDF.PdfPermissions" /> values can be combined using a bitwise OR combination.
+            </summary>
+      <remarks>By default all permissions are set and allowed.</remarks>
+    </member>
+    <member name="P:FarPoint.PDF.PdfSecurity.Use128Bit">
+      <summary>
+            Set to True to use 128 bit encryption with full permissions capability.  
+            Set to False to use lessor 40 bit encryption with limited permissions.
+            The <see cref="F:FarPoint.PDF.PdfPermissions.AllowFillIn" />, <see cref="F:FarPoint.PDF.PdfPermissions.AllowAccessibleReaders" />, and <see cref="F:FarPoint.PDF.PdfPermissions.AllowAssembly" /> permissions require this value to be true.
+            </summary>
+      <remarks>The default value is true.</remarks>
+    </member>
+    <member name="T:FarPoint.PDF.PdfPermissions">
+      <summary>
+            Specifies the permissions available for a PDF document.
+            These values can be combined using a bitwise OR combination.
+            </summary>
+    </member>
+    <member name="F:FarPoint.PDF.PdfPermissions.None">
+      <summary>
+            Set to permit printing the document when it is opened with user access permission.  This is a revision 2 permission.
+            </summary>
+    </member>
+    <member name="F:FarPoint.PDF.PdfPermissions.AllowPrint">
+      <summary>
+            Set to permit printing the document when it is opened with user access permission.  This is a revision 2 permission.
+            </summary>
+    </member>
+    <member name="F:FarPoint.PDF.PdfPermissions.AllowModifyContents">
+      <summary>
+            Set to permit modifying the document’s contents when it is opened with user access permission. Text annotations can still be added or modified.   This is a revision 2 permission.
+            </summary>
+    </member>
+    <member name="F:FarPoint.PDF.PdfPermissions.AllowCopy">
+      <summary>
+            Set to permit copying text or graphics from the document when it is opened with user access permission.   This is a revision 2 permission.
+            </summary>
+    </member>
+    <member name="F:FarPoint.PDF.PdfPermissions.AllowModifyAnnotations">
+      <summary>
+            Set to permit adding or modifying annotations in the document when it is opened with user access permission.  This permission is a revision 2 or revision 3 permission.  Under revision three, the ability to copy/paste document contents is restricted other than what is specified by bit 10 (AllowAccessibleReaders).
+            </summary>
+    </member>
+    <member name="F:FarPoint.PDF.PdfPermissions.AllowFillIn">
+      <summary>
+            Set to permit filling in form fields in the document when it is opened with user access permission.  This is revision 3 only permission.
+            </summary>
+    </member>
+    <member name="F:FarPoint.PDF.PdfPermissions.AllowAccessibleReaders">
+      <summary>
+            Set to permit extracting the text and graphics of the document for accessibility purposes or otherwise (it is most likely for accessibility reasons, but possibly for other “screen reading” purposes) when it is opened with user access permission.  This is revision 3 only permission.
+            </summary>
+    </member>
+    <member name="F:FarPoint.PDF.PdfPermissions.AllowAssembly">
+      <summary>
+            Set to permit the following operations when the document is opened with user access permission:Insert, rotate, or delete pages, and create bookmarks or thumbnail images even if AllowModifyContents is false. This is revision 3 only permission.
+            </summary>
+    </member>
+    <member name="F:FarPoint.PDF.PdfPermissions.All">
+      <summary>
+            Allow all
+            </summary>
+    </member>
+    <member name="T:FarPoint.PDF.Exception">
+      <summary>
+            Represents an exception.
+            </summary>
+    </member>
+    <member name="T:FarPoint.PDF.Exception.enum_Code">
+      <summary>Specifies the type of error that caused the exception.</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Exception.enum_Code.ErrNotTrueTypeFont">
+      <summary>Exception is caused by the font not being a TrueType font</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Exception.enum_Code.ErrIncorrectFlateStream">
+      <summary>Exception is caused by an incorrect (inflated or deflated) data stream</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Exception.enum_Code.ErrIncorrectFontData">
+      <summary>Exception is caused by incorrect font data</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Exception.enum_Code.ErrAlreadyProcess">
+      <summary>Exception is caused by already being processed</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Exception.enum_Code.ErrUnrecognizedImageFormat">
+      <summary>Exception is caused by an unrecognized image format</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Exception.enum_Code.ErrOwnerPassword">
+      <summary>Exception is caused by password is null or over length</summary>
+    </member>
+    <member name="P:FarPoint.PDF.Exception.ErrorCode">
+      <summary>Gets the error code.</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Exception.m_ErrorCode">
+      <summary>Sets the error code.</summary>
+    </member>
+    <member name="P:FarPoint.PDF.Exception.Message">
+      <summary>Gets the error message.</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Exception.m_Message">
+      <summary>Sets the error message.</summary>
+    </member>
+    <member name="T:FarPoint.PDF.Exception.ErrIncorrectFontData">
+      <summary>Handles the exception caused by incorrect font data.</summary>
+    </member>
+    <member name="T:FarPoint.PDF.Exception.ErrAlreadyProcess">
+      <summary>Handles the exception caused by already being in process.</summary>
+    </member>
+    <member name="T:FarPoint.PDF.Exception.ErrUnrecognizedImageFormat">
+      <summary>Handles the exception caused by an unrecognized image format.</summary>
+    </member>
+    <member name="T:FarPoint.PDF.Exception.ErrIncorrectFlateStream">
+      <summary>Handles the exception caused by an incorrect (inflated or deflated) data stream.</summary>
+    </member>
+    <member name="T:FarPoint.PDF.Exception.ErrOwnerPassword">
+      <summary>Handles the exception caused by password null or over length</summary>
+    </member>
+    <member name="T:FarPoint.PDF.Exception.ErrUserPassword">
+      <summary>Handles the exception caused by password null or over length</summary>
+    </member>
+    <member name="T:FarPoint.PDF.Objects.ImageObject">
+      <summary>
+            Represents a image in a PDF document.
+            </summary>
+    </member>
+    <member name="P:FarPoint.PDF.Objects.ImageObject.Name">
+      <summary>
+            Gets or sets the name of an image object.
+            </summary>
+    </member>
+    <member name="P:FarPoint.PDF.Objects.ImageObject.Width">
+      <summary>
+            Gets or sets the width of the original image.
+            </summary>
+    </member>
+    <member name="P:FarPoint.PDF.Objects.ImageObject.Height">
+      <summary>
+            Gets or sets the height of the original image.
+            </summary>
+    </member>
+    <member name="P:FarPoint.PDF.Objects.ImageObject.ColorSpace">
+      <summary>
+            Gets or sets the colorspace for the image.
+            </summary>
+    </member>
+    <member name="P:FarPoint.PDF.Objects.ImageObject.BPC">
+      <summary>
+            Gets or sets the resolution (in bits-per-component).
+            </summary>
+    </member>
+    <member name="P:FarPoint.PDF.Objects.ImageObject.EmbedFormat">
+      <summary>
+            Gets or sets the image embed format, which may be different from original image type.
+            </summary>
+    </member>
+    <member name="P:FarPoint.PDF.Objects.ImageObject.BaseImage">
+      <summary>
+            Gets or sets the underlying image.
+            </summary>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.ImageObject.#ctor(System.Drawing.Image,FarPoint.PDF.Objects.PDFObjectCollection)">
+      <summary>
+            Initializes the image object.
+            </summary>
+      <param name="image">Image to be used</param>
+      <param name="objs">Collection of PDf objects in a page</param>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.ImageObject.#ctor(System.Drawing.Image,FarPoint.PDF.Objects.PDFObjectCollection,System.Boolean)">
+      <summary>
+            Initializes the image object.
+            </summary>
+      <param name="image">Image to be used</param>
+      <param name="objs">Collection of PDf objects in a page</param>
+      <param name="keepTransparent">The image object will try to use BMP type keep pixel transpacency</param>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.ImageObject.Equals(System.Object)">
+      <summary>
+            Determines whether the image object is identical to the specified object.
+            </summary>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.ImageObject.GetHashCode">
+      <summary>
+            Gets the hash code.
+            </summary>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.ImageObject.GetFormat(System.Drawing.Image)">
+      <summary>
+            Returns the image format of the image.
+            </summary>
+      <param name="image">Image to be used</param>
+      <remarks>
+            By default all images are embedded in JPEG format except for BMP and GIF.
+            </remarks>
+      <returns>Type of image</returns>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.ImageObject.ResaveImageMemory(System.Drawing.Image,System.IO.Stream,FarPoint.PDF.Objects.ImageObject.ImageType)">
+      <summary>
+            Saves the image object into memory in the specified format
+            </summary>
+      <param name="image">Image to save</param>
+      <param name="ostr">Output stream</param>
+      <param name="format">Format in which to save</param>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.ImageObject.UpdateImageData(System.IO.Stream)">
+      <summary>
+            Updates the image data.
+            </summary>
+      <param name="istr">Image stream</param>
+    </member>
+    <member name="T:FarPoint.PDF.Objects.ImageObject.ImageType">
+      <summary>
+            Specifies the supported image types.
+            </summary>
+    </member>
+    <member name="F:FarPoint.PDF.Objects.ImageObject.ImageType.JPEG">
+      <summary>[0] JPEG image type</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Objects.ImageObject.ImageType.GIF">
+      <summary>[1] GIF image type</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Objects.ImageObject.ImageType.BMP">
+      <summary>[2] BMP image type</summary>
+    </member>
+    <member name="T:FarPoint.PDF.Objects.ImageObject.IImageHelper">
+      <summary>
+            Interface defined for the Image decoder class.
+            </summary>
+    </member>
+    <member name="T:FarPoint.PDF.Objects.ImageObject.ImageParameters">
+      <summary>
+            Represents the image parameters.
+            </summary>
+    </member>
+    <member name="F:FarPoint.PDF.Objects.ImageObject.ImageParameters.width">
+      <summary>Sets the width of the image.</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Objects.ImageObject.ImageParameters.height">
+      <summary>Sets the height of the image.</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Objects.ImageObject.ImageParameters.colorspace">
+      <summary>Sets the colorspace of the image.</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Objects.ImageObject.ImageParameters.bpc">
+      <summary>Sets the bits-per-component(bpc) of the image.</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Objects.ImageObject.ImageParameters.type">
+      <summary>Sets the type of the image.</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Objects.ImageObject.ImageParameters.streamLength">
+      <summary>Sets the length of the image stream.</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Objects.ImageObject.ImageParameters.data">
+      <summary>Sets the data.</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Objects.ImageObject.ImageParameters.TransparentIndex">
+      <summary>Sets the transparency index of the image.</summary>
+    </member>
+    <member name="T:FarPoint.PDF.Objects.ObjectBase">
+      <summary>Represents the base objects.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.ObjectBase.CloneTo(FarPoint.PDF.Objects.ObjectBase)">
+      <summary>Clones the specified objects.</summary>
+    </member>
+    <member name="P:FarPoint.PDF.Objects.ObjectBase.Number">
+      <summary>Gets or sets a number id.</summary>
+    </member>
+    <member name="T:FarPoint.PDF.Objects.PDFObject">
+      <summary>Represents the base objects for PDFs.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.PDFObject.#ctor">
+      <summary>Creates a PDF object.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.PDFObject.Dispose">
+      <summary>Disposes of resources.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.PDFObject.ToString">
+      <summary>Converts to a string.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.PDFObject.Commit">
+      <summary>Commits.</summary>
+    </member>
+    <member name="P:FarPoint.PDF.Objects.PDFObject.Number">
+      <summary>Gets a number.</summary>
+    </member>
+    <member name="P:FarPoint.PDF.Objects.PDFObject.Value">
+      <summary>Gets or sets a value.</summary>
+    </member>
+    <member name="P:FarPoint.PDF.Objects.PDFObject.Dictionary">
+      <summary>Gets or sets a dictionary.</summary>
+    </member>
+    <member name="T:FarPoint.PDF.Objects.PDFObject.ReferenceObject">
+      <summary>Represents a reference object.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.PDFObject.ReferenceObject.#ctor">
+      <summary>Creates a new reference object.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.PDFObject.ReferenceObject.#ctor(FarPoint.PDF.Objects.PDFObject)">
+      <summary>Creates a new reference object.</summary>
+    </member>
+    <member name="P:FarPoint.PDF.Objects.PDFObject.ReferenceObject.Object">
+      <summary>Gets a PDF object.</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Objects.PDFObject.ReferenceObject.m_Object">
+      <summary>Gets a PDF object.</summary>
+    </member>
+    <member name="T:FarPoint.PDF.Objects.PDFObject.ArrayObject">
+      <summary>Represents an array object.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.PDFObject.ArrayObject.#ctor">
+      <summary>Creates a new array object.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.PDFObject.ArrayObject.#ctor(System.Object[])">
+      <summary>Creates a new array object.</summary>
+    </member>
+    <member name="P:FarPoint.PDF.Objects.PDFObject.ArrayObject.Values">
+      <summary>Gets an array list of values.</summary>
+    </member>
+    <member name="T:FarPoint.PDF.Objects.PDFObject.StringObject">
+      <summary>Represents a string object.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.PDFObject.StringObject.#ctor">
+      <summary>Creates a new string object.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.PDFObject.StringObject.#ctor(System.String,System.Int32)">
+      <summary>Creates a new string object.</summary>
+    </member>
+    <member name="P:FarPoint.PDF.Objects.PDFObject.StringObject.Value">
+      <summary>Gets or sets a value.</summary>
+    </member>
+    <member name="T:FarPoint.PDF.Objects.PDFObject.DictionaryObject">
+      <summary>Represents a dictionary object.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.PDFObject.DictionaryObject.#ctor">
+      <summary>Creates a new dictionary object.</summary>
+    </member>
+    <member name="P:FarPoint.PDF.Objects.PDFObject.DictionaryObject.Item(System.String)">
+      <summary>Gets or sets a value.</summary>
+    </member>
+    <member name="P:FarPoint.PDF.Objects.PDFObject.DictionaryObject.Keys">
+      <summary>Gets a collection of keys.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.PDFObject.DictionaryObject.Remove(System.String)">
+      <summary>Removes a key from the collection.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.PDFObject.DictionaryObject.ContainsKey(System.String)">
+      <summary>Returns whether the collection contains the specified key.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.PDFObject.DictionaryObject.Clear">
+      <summary>Clears the entire collection.</summary>
+    </member>
+    <member name="P:FarPoint.PDF.Objects.PDFObject.DictionaryObject.Number">
+      <summary>Gets a number.</summary>
+    </member>
+    <member name="T:FarPoint.PDF.Objects.BinaryStreamObject">
+      <summary>Represents a binary stream object.</summary>
+      <remarks>
+            This class is used to store the colorspace for a GIF image as a Unicode stream
+            and is required because default stream only stores ASCII format values.
+            </remarks>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.BinaryStreamObject.#ctor">
+      <summary>Creates a new binary stream object.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.BinaryStreamObject.#ctor(System.Byte[])">
+      <summary>Creates a new binary stream object.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.BinaryStreamObject.Commit">
+      <summary>Commits.</summary>
+    </member>
+    <member name="T:FarPoint.PDF.Objects.StreamObject">
+      <summary>Represents a stream object.</summary>
+    </member>
+    <member name="T:FarPoint.PDF.Objects.StreamObject.enum_FilterType">
+      <summary>Specifies an image-specific filter type.</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Objects.StreamObject.enum_FilterType.Raw">
+      <summary>[0] Raw data, no filter is used</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Objects.StreamObject.enum_FilterType.Flate">
+      <summary>A flat filter is used</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Objects.StreamObject.enum_FilterType.DCTDecode">
+      <summary>A DTCDecode filter is used (a lossy filter based on the JPEG standard)</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.StreamObject.#ctor">
+      <summary>Creates a new stream object.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.StreamObject.GetStream">
+      <summary>Gets a stream.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.StreamObject.GetStreamLength">
+      <summary>Gets the length of the stream.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.StreamObject.Dispose">
+      <summary>Disposes resources.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.StreamObject.Commit">
+      <summary>Commits.</summary>
+    </member>
+    <member name="P:FarPoint.PDF.Objects.StreamObject.FilterType">
+      <summary>Gets or sets the type of image filter.</summary>
+    </member>
+    <member name="T:FarPoint.PDF.Objects.PDFObjectCollection">
+      <summary>Represents a collection of PDF objects.</summary>
+    </member>
+    <member name="P:FarPoint.PDF.Objects.PDFObjectCollection.Item(System.Int32)">
+      <summary>Gets a PDF object.</summary>
+    </member>
+    <member name="P:FarPoint.PDF.Objects.PDFObjectCollection.Version">
+      <summary>Gets sets the version.</summary>
+    </member>
+    <member name="P:FarPoint.PDF.Objects.PDFObjectCollection.VersionNumver">
+      <summary>Gets the version number.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.PDFObjectCollection.Add(FarPoint.PDF.Objects.PDFObject)">
+      <summary>Adds a PDF object to the collection.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.PDFObjectCollection.Remove(FarPoint.PDF.Objects.PDFObject)">
+      <summary>Removes a PDF object from the collection.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.PDFObjectCollection.FindObject(System.Type)">
+      <summary>Finds a PDF object.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.PDFObjectCollection.FindObjects(System.Type)">
+      <summary>Finds an array of PDF objects.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.PDFObjectCollection.Numbering">
+      <summary>Counts the number of PDF objects.</summary>
+    </member>
+    <member name="T:FarPoint.PDF.Objects.FontObject">
+      <summary>Represents a font object.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.FontObject.Dispose">
+      <summary>Disposes of resources.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.FontObject.ToString">
+      <summary>Converts to a string.</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Objects.FontObject.CurrentOrdering">
+      <summary>Sets the ordering.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.FontObject.LoadFontData(System.Boolean)">
+      <summary>Loads the font data.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.FontObject.SetFontData">
+      <summary>Sets the font data.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.FontObject.Commit">
+      <summary>Commits.</summary>
+    </member>
+    <member name="P:FarPoint.PDF.Objects.FontObject.Name">
+      <summary>Gets the name.</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Objects.FontObject.m_Name">
+      <summary>Sets the name.</summary>
+    </member>
+    <member name="P:FarPoint.PDF.Objects.FontObject.FontName">
+      <summary>Gets the font name.</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Objects.FontObject.m_FontName">
+      <summary>Sets the font name.</summary>
+    </member>
+    <member name="P:FarPoint.PDF.Objects.FontObject.BaseLine">
+      <summary>Gets the base line.</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Objects.FontObject.m_BaseLine">
+      <summary>Sets the base line.</summary>
+    </member>
+    <member name="P:FarPoint.PDF.Objects.FontObject.Descent">
+      <summary>Gets the descent.</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Objects.FontObject.m_Descent">
+      <summary>Sets the descent.</summary>
+    </member>
+    <member name="P:FarPoint.PDF.Objects.FontObject.IsStandardFont">
+      <summary>Gets whether the font is a standard font.</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Objects.FontObject.m_StandardFont">
+      <summary>Sets whether the font is a standard font.</summary>
+    </member>
+    <member name="P:FarPoint.PDF.Objects.FontObject.Embed">
+      <summary>Gets the embed.</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Objects.FontObject.m_Embed">
+      <summary>Sets the embed.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.FontObject.GetGlyphIndex(System.Char,System.Int32@)">
+      <summary>Gets the glyph index.</summary>
+    </member>
+    <member name="T:FarPoint.PDF.Objects.InfoObject">
+      <summary>Represents an information object.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.InfoObject.ToString">
+      <summary>Converts to a string.</summary>
+    </member>
+    <member name="P:FarPoint.PDF.Objects.InfoObject.Title">
+      <summary>Gets or sets the title.</summary>
+    </member>
+    <member name="P:FarPoint.PDF.Objects.InfoObject.Author">
+      <summary>Gets or sets the author.</summary>
+    </member>
+    <member name="P:FarPoint.PDF.Objects.InfoObject.Subject">
+      <summary>Gets or sets the subject.</summary>
+    </member>
+    <member name="P:FarPoint.PDF.Objects.InfoObject.Creator">
+      <summary>Gets or sets the creator.</summary>
+    </member>
+    <member name="P:FarPoint.PDF.Objects.InfoObject.Producer">
+      <summary>Gets or sets the producer.</summary>
+    </member>
+    <member name="P:FarPoint.PDF.Objects.InfoObject.CreationDate">
+      <summary>Gets or sets the creation date.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.InfoObject.Get(System.String)">
+      <summary>Gets a string.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.InfoObject.Set(System.String,System.Object)">
+      <summary>Sets a string.</summary>
+    </member>
+    <member name="T:FarPoint.PDF.Objects.PageObject">
+      <summary>Represents a PDF object.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.PageObject.ToString">
+      <summary>Converts to a string.</summary>
+    </member>
+    <member name="P:FarPoint.PDF.Objects.PageObject.PaperSize">
+      <summary>Gets or sets the paper size.</summary>
+    </member>
+    <member name="P:FarPoint.PDF.Objects.PageObject.Content">
+      <summary>Gets or sets a content object.</summary>
+    </member>
+    <member name="P:FarPoint.PDF.Objects.PageObject.Resource">
+      <summary>Gets or sets a resource object.</summary>
+    </member>
+    <member name="P:FarPoint.PDF.Objects.PageObject.Parent">
+      <summary>Gets or sets a pages object.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.PageObject.GetGraphics">
+      <summary>Gets graphics.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.PageObject.GetGraphics(System.Drawing.Graphics)">
+      <summary>Gets graphics.</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Objects.PageObject.m_Objects">
+      <summary>Gets a collection of objects.</summary>
+    </member>
+    <member name="T:FarPoint.PDF.Objects.RootObject">
+      <summary>Represents a root object.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.RootObject.#ctor">
+      <summary>Creates a new root object.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.RootObject.#ctor(FarPoint.PDF.Objects.PagesObject)">
+      <summary>Creates a new root object.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.RootObject.ToString">
+      <summary>Converts to a string.</summary>
+    </member>
+    <member name="T:FarPoint.PDF.Objects.ContentObject">
+      <summary>Represents a content object.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.ContentObject.ToString">
+      <summary>Converts to a string.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.ContentObject.Commit">
+      <summary>Commits.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.ContentObject.Dispose">
+      <summary>Disposes resources.</summary>
+    </member>
+    <member name="P:FarPoint.PDF.Objects.ContentObject.Writer">
+      <summary>Gets the text writer.</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Objects.ContentObject.m_Writer">
+      <summary>Gets a text writer.</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Objects.ContentObject.m_Page">
+      <summary>Gets a page object.</summary>
+    </member>
+    <member name="T:FarPoint.PDF.Objects.PatternObject">
+      <summary>
+            Represents a tiling pattern created with the TextureBrush object.
+            </summary>
+    </member>
+    <member name="P:FarPoint.PDF.Objects.PatternObject.Name">
+      <summary>Gets or sets the name.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.PatternObject.Equals(System.Object)">
+      <summary>Returns whether the object is equal to the specified object.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.PatternObject.GetHashCode">
+      <summary>Gets the hash code.</summary>
+    </member>
+    <member name="T:FarPoint.PDF.Objects.PagesObject">
+      <summary>Represents a pages object.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.PagesObject.ToString">
+      <summary>Converts to a string.</summary>
+    </member>
+    <member name="P:FarPoint.PDF.Objects.PagesObject.PaperSize">
+      <summary>Gets or sets the paper size.</summary>
+    </member>
+    <member name="P:FarPoint.PDF.Objects.PagesObject.Count">
+      <summary>Gets the number of pages.</summary>
+    </member>
+    <member name="P:FarPoint.PDF.Objects.PagesObject.Item(System.Int32)">
+      <summary>Gets the page object.</summary>
+    </member>
+    <member name="P:FarPoint.PDF.Objects.PagesObject.AllowEmbedExternalFont">
+      <summary>
+            Gets or sets a value indicating whether the external font can be embedded on PDF file.
+            </summary>
+      <value>
+        <c>true</c> if the external font can be embedded on PDF file; otherwise, <c>false</c>.
+            </value>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.PagesObject.CreatePage">
+      <summary>Creates a page.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.PagesObject.Add(FarPoint.PDF.Objects.PageObject)">
+      <summary>Adds a page.</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Objects.PagesObject.m_Objects">
+      <summary>Gets a collection of objects.</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Objects.PagesObject.m_Pages">
+      <summary>Gets an array of pages.</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Objects.PagesObject.m_ResourceManager">
+      <summary>Gets the resource manager.</summary>
+    </member>
+    <member name="T:FarPoint.PDF.Objects.ResourcesObject">
+      <summary>Represents a resources object.</summary>
+    </member>
+    <member name="M:FarPoint.PDF.Objects.ResourcesObject.ToString">
+      <summary>Converts to a string.</summary>
+    </member>
+    <member name="P:FarPoint.PDF.Objects.ResourcesObject.AllowEmbedExternalFont">
+      <summary>
+            Gets or sets a value indicating whether the external font can be embedded on PDF file.
+            </summary>
+      <value>
+        <c>true</c> if the external font can be embedded on PDF file; otherwise, <c>false</c>.
+            </value>
+    </member>
+    <member name="F:FarPoint.PDF.Objects.ResourcesObject.ResourceManager">
+      <summary>Gets a resource manager.</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Objects.ResourcesObject.m_UseFont">
+      <summary>Gets a hash table of fonts.</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Objects.ResourcesObject.m_FontDic">
+      <summary>Gets a font dictionary.</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Objects.ResourcesObject.m_ImageDic">
+      <summary>Gets an image dictionary.</summary>
+    </member>
+    <member name="F:FarPoint.PDF.Objects.ResourcesObject.m_PatternDic">
+      <summary>Gets a pattern dictionary.</summary>
+    </member>
+    <member name="T:FarPoint.PDF.SupportedProduct">
+      <summary>
+            Indicates an enum that specifies supported product
+            </summary>
+    </member>
+    <member name="F:FarPoint.PDF.SupportedProduct.SpreadWin">
+      <summary>
+            Specifies support for SpreadWin product
+            </summary>
+    </member>
+    <member name="F:FarPoint.PDF.SupportedProduct.SpreadWeb">
+      <summary>
+            Specifies support for SpreadWeb product
+            </summary>
+    </member>
+    <member name="T:FarPoint.PDF.ISupportedProduct">
+      <summary>
+            Indicates an interface which represent the way to specify supported product
+            </summary>
+    </member>
+    <member name="P:FarPoint.PDF.ISupportedProduct.Product">
+      <summary>
+            Get value of enum SupportedProduct specifies supported product
+            </summary>
+    </member>
+    <member name="M:FarPoint.PDF.Writer.#ctor(FarPoint.PDF.Document,System.IO.Stream,FarPoint.PDF.PdfSecurity)">
+      <summary>
+            Create a new Writer object with the specified settings.
+            </summary>
+      <param name="doc">The document.</param>
+      <param name="strm">The stream.</param>
+      <param name="security">The pdf security info.</param>
+    </member>
+    <member name="M:FarPoint.PDF.Writer.Write(FarPoint.PDF.Document,System.IO.Stream,FarPoint.PDF.PdfSecurity)">
+      <summary>
+            Writes the specified document to stream with security info.
+            </summary>
+      <param name="doc">The document need to print</param>
+      <param name="strm">The stream.</param>
+      <param name="security">The pdf security info.</param>
+    </member>
+  </members>
+</doc>
