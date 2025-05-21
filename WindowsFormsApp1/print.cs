@@ -54,8 +54,6 @@ namespace WindowsFormsApp1
         private static PrintHeader ColumnHeaderVisible;
 
         private const int WM_SETICON = 0x0080;
-        private static string sPreviewWindowTitle;
-        private static Timer timer;
 
         public static async void gsSSPrint(
             bool preview,
@@ -99,7 +97,7 @@ namespace WindowsFormsApp1
 
             StyleInfo headerStyle = new StyleInfo
             {
-                Border = new LineBorder(Color.Black, 1, false, false, false, true)
+                Border = new LineBorder(Color.FromArgb(153, 153, 153), 1, false, false, false, true)
             };
 
             ss.ColumnHeader.DefaultStyle = headerStyle;

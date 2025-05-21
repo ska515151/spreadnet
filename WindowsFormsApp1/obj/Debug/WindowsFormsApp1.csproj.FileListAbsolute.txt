@@ -31,3 +31,4 @@ D:\나스테크\spread_q\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsForm
 D:\나스테크\spread_q\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 D:\나스테크\spread_q\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 D:\나스테크\spread_q\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Main.resources
+D:\나스테크\spread_q\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\FarPoint.Win.TextRenderer.dll

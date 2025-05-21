@@ -30,6 +30,7 @@ namespace WindowsFormsApp1
                 TitlePosition: print.ssTitlePosition.ssCenter,
                 PrintOrientType: print.ssPrintOrientType.ssPrintLandscape,
                 ssPrintStyle: print.ssPrintType.ssSmartPrint,
+                ssPrintBorder: false,
                 zoomFactor: 1F
             );
         }

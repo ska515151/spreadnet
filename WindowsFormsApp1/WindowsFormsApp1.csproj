@@ -40,6 +40,10 @@
     <Reference Include="FarPoint.Win, Version=17.1.20241.0, Culture=neutral, PublicKeyToken=327c3516b1b18457" />
     <Reference Include="FarPoint.Win.Chart, Version=17.1.20241.0, Culture=neutral, PublicKeyToken=327c3516b1b18457" />
     <Reference Include="FarPoint.Win.Spread, Version=17.1.20241.0, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL" />
+    <Reference Include="FarPoint.Win.TextRenderer, Version=17.1.20241.0, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\MESCIUS\Spread.NET 17\Windows Forms\v17.1.20241.0\bin\FarPoint.Win.TextRenderer.dll</HintPath>
+    </Reference>
     <Reference Include="GrapeCity.CalcEngine, Version=17.1.20241.0, Culture=neutral, PublicKeyToken=327c3516b1b18457" />
     <Reference Include="GrapeCity.Spreadsheet, Version=17.1.20241.0, Culture=neutral, PublicKeyToken=327c3516b1b18457" />
     <Reference Include="GrapeCity.Spreadsheet.Win, Version=17.1.20241.0, Culture=neutral, PublicKeyToken=327c3516b1b18457" />
@@ -101,9 +105,5 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup />
-  <ItemGroup>
-    <Content Include="issue\컬럼헤더 상단으로 정렬%28한글일 때만%29.png" />
-    <Content Include="issue\테두리 두꺼워짐.png" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
